@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patangi Sowmya Sree | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #121212;
+            --text-light: #000000;
+            --text-dark: #ffffff;
+            --primary-color: #7f00ff;
+            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Light Mode Colorful Background */
+body.light-mode {
+    background: linear-gradient(135deg, #f6f8ff, #e0f7fa, #fce4ec, #fff3e0);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    color: #222;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+/* Smooth transition */
+body {
+    transition: background 1s, color 0.5s;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+        body.dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+header .name {
+    font-weight: 900;
+    font-size: 1.8rem;
+    flex: 1;
+    text-align: center;
+    color: #ff007f;
+}
+
+header nav {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode header nav a {
+    color: #fff;
+}
+
+header nav a:hover {
+    color: #ff1493;
+    transform: scale(1.05);
+}
+
+.toggle-mode {
+    padding: 8px 16px;
+    margin-left: 20px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #666;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .toggle-mode {
+    color: white;
+    border-color: white;
+}
+
+.toggle-mode:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.3);
+}
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            box-shadow: var(--box-shadow);
+        }
+
+        .typing {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-top: 10px;
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .box {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 30px 40px; /* More padding for space */
+    margin: 30px auto;
+    width: 90%;
+    max-width: 900px;
+    min-height: 300px; /* Ensures consistent height */
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--box-bg); /* Use variable for light/dark compatibility */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; /* Spacing between child elements */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color); /* Adjust for theme */
+}
+
+.box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Enhance pop effect */
+}
+
+/* Styles specific to the skills section */
+#skills {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+#skills h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#skills h3 {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+/* Skill Box Styles */
+/* Light Mode - Gradient Background for Skills Section */
+#skills {
+  background: linear-gradient(135deg, #f6f8ff, #e0f7fa, #fce4ec, #fff3e0);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #222;
+  border-radius: 12px;
+  padding: 20px;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Dark Mode - Solid Background for Skills Section */
+body.dark-mode #skills {
+  background: #121212;
+  animation: none;
+  color: #f5f5f5;
+}
+
+/* Technical Skills and Soft Skills Heading Styling */
+/* Light Mode - Gradient Background for Skills Section */
+#skills {
+  background: linear-gradient(135deg, #f6f8ff, #e0f7fa, #fce4ec, #fff3e0);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #222;
+  border-radius: 12px;
+  padding: 20px;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Dark Mode - Black Background and White Text for Skills Section */
+body.dark-mode #skills {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+  border-radius: 12px;
+  padding: 20px;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Heading for Skills Section */
+#skills h2 {
+  color: var(--accent-color, #222); /* Default color for headings */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Dark Mode - Heading Text Color */
+body.dark-mode #skills h2 {
+  color: #ffffff; /* White text for headings */
+}
+
+/* Skills Row */
+#skills .skills-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 5px;
+  flex-wrap: wrap;
+}
+
+/* Skill Box */
+#skills .box {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin: 8px;
+  width: 140px;
+  min-height: 90px;
+  max-height: 90px;
+  background-color: var(--box-bg, #ffffff);
+  box-shadow: var(--box-shadow, 0 2px 6px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-color, #000);
+  text-align: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+/* Dark Mode - Skill Box Styling */
+body.dark-mode #skills .box {
+  background-color: #1e1e1e; /* Dark background for the boxes */
+  color: #ffffff; /* White text */
+  border: 1px solid #ffffff; /* White border */
+}
+
+/* Dark Mode - Skill Names (Python, R, SQL, etc.) */
+body.dark-mode #skills .box h3 {
+  color: #ffffff; /* White text for skills */
+}
+
+/* Hover Effect */
+#skills .box:hover {
+  transform: scale(0.95);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+/* Dark Mode Hover Effect */
+body.dark-mode #skills .box:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+/* Soft Skills (Analytical Thinking, Problem Solving, etc.) */
+#skills .soft-skills {
+  color: var(--text-color, #222); /* Default color */
+}
+
+/* Dark Mode - Soft Skills Text */
+body.dark-mode #skills .soft-skills {
+  color: #ffffff; /* White text for soft skills */
+}
+
+/* Responsive: Tablet */
+@media (max-width: 768px) {
+  #skills .skills-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #skills .box {
+    width: 100%;
+    max-width: 220px;
+    margin-bottom: 6px;
+    height: auto;
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+  #skills h2 {
+    font-size: 1.5rem;
+  }
+
+  #skills .box {
+    padding: 8px 4px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Shared Gradient Animation Keyframes */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Shared styling for the About box */
+#about .box {
+  padding: 20px;              
+  border-radius: 8px;         
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;  /* Light mode default: white background */
+  color: #000000;             /* Light mode default: black text */
+  transition: 
+    background-color 0.3s ease, 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+#about .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f0f0f0;
+}
+
+/* Dark Mode override */
+body.dark-mode #about .box {
+  background-color: #000000;  /* Dark mode: black background */
+  color: #ffffff;             /* Dark mode: white text */
+}
+
+/* Dark Mode hover effect */
+body.dark-mode #about .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+  background-color: #111111;
+}
+
+/* Ensure paragraph inside the box has no extra margins */
+#about .box p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+        .cert-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--primary-color);
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input, form textarea, form button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #5900cc;
+        }
+
+        html {
+  scroll-behavior: smooth;
+}
+        nav a.active {
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+
+      /* Resume Section Base Styles */
+/* Light Mode Default */
+/* Resume Section Styling */
+.resume-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f6f8ff, #e0f7fa, #fce4ec, #fff3e0);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: var(--text-color);
+  transition: background 0.5s ease, color 0.5s ease;
+  border-radius: 12px;
+}
+
+/* Dark Mode Override */
+body.dark-mode .resume-section {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c, #121212, #1a1a1a);
+  background-size: 400% 400%;
+  color: #f5f5f5;
+  animation: none;
+}
+
+/* Section Title */
+.resume-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+}
+
+/* Resume Container */
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Resume Preview Box */
+.resume-preview {
+  width: 80%;
+  height: 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  background-color: #fff;
+  filter: blur(4px);
+  cursor: pointer;
+  transition: filter 0.5s ease, transform 0.3s ease;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Dark Mode Resume Background */
+body.dark-mode .resume-preview {
+  background-color: #2a2a2a;
+}
+
+/* On Click: Show Full Resume */
+.resume-preview.active {
+  filter: blur(0);
+  pointer-events: auto;
+  height: 500px;
+  transform: scale(1.02);
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Download Button */
+.download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--accent-color-light);
+  color: var(--text-color-light);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Dark Mode Button */
+body.dark-mode .download-btn {
+  background-color: var(--accent-color-dark);
+  color: var(--text-color-dark);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect for Download Button */
+.download-btn:hover {
+  background-color: #c2185b;
+  transform: scale(1.05);
+}
+
+/* Dark Mode Hover Effect */
+body.dark-mode .download-btn:hover {
+  background-color: #d81b60;
+  transform: scale(1.05);
+}
+
+/* Active State for Download Button */
+.download-btn:active {
+  background-color: #9c1b44;
+  transform: scale(0.98);
+}
+
+/* Dark Mode Active State */
+body.dark-mode .download-btn:active {
+  background-color: #c2185b;
+  transform: scale(0.98);
+}
+/* Certifications & Projects Section Titles */
+#certifications h2,
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+/* Common Box Styles */
+#certifications .box,
+#projects .box {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 12px auto;
+  width: 60%;
+  min-height: 120px;
+  max-height: none;
+  background-color: var(--box-bg, #ffffff);
+  box-shadow: var(--box-shadow, 0 2px 6px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+  color: var(--text-color, #000);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Certificate Text & Link */
+#certifications .box p {
+  margin: 0;
+}
+
+.cert-link {
+  margin-top: 10px;
+  color: var(--accent-color);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cert-link:hover {
+  color: #c2185b;
+  text-decoration: underline;
+}
+
+/* Project Section: Text Visible + Larger Image */
+#projects .box p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+#projects .box img {
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+/* Dark Mode - Box Styles */
+body.dark-mode #certifications .box,
+body.dark-mode #projects .box {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+body.dark-mode .cert-link {
+  color: #90caf9;
+}
+
+body.dark-mode .cert-link:hover {
+  color: #f48fb1;
+}
+
+/* Hover Effects */
+#certifications .box:hover,
+#projects .box:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+body.dark-mode #certifications .box:hover,
+body.dark-mode #projects .box:hover {
+  background-color: #333333;
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #certifications .box,
+  #projects .box {
+    width: 90%;
+    max-height: none;
+  }
+
+  #projects .box img {
+    height: 200px;
+  }
+
+  #projects .box p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #certifications .box,
+  #projects .box {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  #certifications h2,
+  #projects h2 {
+    font-size: 1.8rem;
+  }
+
+  #projects .box img {
+    height: 160px;
+  }
+
+  #projects .box p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Styling the social icons */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Increased space between icons */
+}
+
+.social-icon {
+    font-size: 3rem; /* Larger icons */
+    color: #000;
+    text-decoration: none;
+    font-weight: bold; /* Bold icons */
+    transition: color 0.3s ease;
+}
+
+.social-icon i {
+    margin-right: 8px;
+}
+
+/* Hover Effect */
+.social-icon:hover {
+    color: #0073e6; /* Color on hover (blue) */
+}
+
+/* Dark Mode Styling */
+body.dark-mode .social-icon {
+    color: #f5f5f5;
+}
+
+body.dark-mode .social-icon:hover {
+    color: #ff4081; /* Dark mode hover effect */
+}
+/* Styling for certificate images */
+/* Styling for certificate images */
+.certificate-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for certificate images */
+.certificate-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for "View Certificate" button */
+.btn-view-certificate {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 12px;
+    background-color: #007BFF; /* Button background color */
+    color: #fff; /* Text color */
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for "View Certificate" button */
+.btn-view-certificate:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.box {
+    flex: 1;
+    min-width: 250px;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 20px;
+  margin-top: 10px;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar div {
+  height: 100%;
+  background-color: #007bff;
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+
+.stars {
+    font-size: 1.5em;
+    color: #f7c948; /* gold */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>MY PORTFOLIO</div>
+
+        <nav>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#resume">MY RESUME</a>
+            <a href="#certifications">CERTIFICATIONS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#FEEDBACK">FEEDBACK</a>
+        </nav>
+        <button class="toggle-mode" onclick="toggleMode()">Toggle Mode</button>
+    </header>
+
+    <div class="hero">
+      <img src="IMG_20250416_200549.jpg" alt="Profile Photo">
+      <h1>
+          Hello! I’m 
+          <span id="speak-name" style="cursor: pointer; text-decoration: underline dotted;">Patangi Sowmya Sree</span>
+      </h1>
+      <p><strong style="font-size: 1.2rem; color: var(--accent-color);">"Believe in yourself! Anything is possible."</strong></p>
+      <p class="typing" id="typing-text"></p>
+      <div class="social-icons">
+        <a href="https://github.com/SowmyaSree11" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sowmya-sree-352b19255" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:patangisowmyasree05@gmail.com" target="_blank" class="social-icon">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+  </div>
+  
+  <section id="about">
+      <h2>About Me</h2>
+      <div class="box">
+          <p>I’m a passionate Data Science student with strong analytical and programming skills, currently pursuing B.Tech at MVGR College of Engineering. I enjoy learning new technologies and applying them to solve real-world problems. Always curious and self-motivated, I actively seek internships and part-time opportunities to gain hands-on experience. Skilled in Python, R, statistics, and machine learning with a strong academic foundation. Eager to contribute to impactful projects and grow as a data-driven problem solver.</p>
+      </div>
+  </section>
+
+  <section id="skills">
+    <!-- Technical Skills Section -->
+    <h2 style="text-align: center;">Technical Skills</h2>
+  
+    <div class="skills-row">
+      <div class="box">
+        <h3>Python</h3>
+        <div class="progress-bar">
+          <div style="width: 90%;">90%</div>
+        </div>
+      </div>
+      <div class="box">
+        <h3>C</h3>
+        <div class="progress-bar">
+          <div style="width: 75%;">75%</div>
+        </div>
+      </div>
+      <div class="box">
+        <h3>SQL</h3>
+        <div class="progress-bar">
+          <div style="width: 85%;">85%</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="skills-row">
+      <div class="box">
+        <h3>DBMS</h3>
+        <div class="progress-bar">
+          <div style="width: 80%;">80%</div>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Pandas</h3>
+        <div class="progress-bar">
+          <div style="width: 90%;">90%</div>
+        </div>
+      </div>
+      <div class="box">
+        <h3>NumPy</h3>
+        <div class="progress-bar">
+          <div style="width: 85%;">85%</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="skills-row">
+      <div class="box">
+        <h3>Statistical Analysis</h3>
+        <div class="progress-bar">
+          <div style="width: 80%;">80%</div>
+        </div>
+      </div>
+      <div class="box">
+        <h3>DSA</h3>
+        <div class="progress-bar">
+          <div style="width: 75%;">75%</div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Soft Skills Section -->
+    <div style="margin-top: 60px;">
+      <h2 style="text-align: center;">Soft Skills</h2>
+  
+      <div class="skills-row">
+        <div class="box">
+          <h3>Analytical Thinking</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="box">
+          <h3>Problem Solving</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="box">
+          <h3>Communication</h3>
+          <div class="stars">⭐⭐⭐⭐</div>
+        </div>
+      </div>
+  
+      <div class="skills-row">
+        <div class="box">
+          <h3>Time Management</h3>
+          <div class="stars">⭐⭐⭐⭐</div>
+        </div>
+        <div class="box">
+          <h3>Team Collaboration</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="box">
+          <h3>Adaptability</h3>
+          <div class="stars">⭐⭐⭐⭐</div>
+        </div>
+      </div>
+  
+      <div class="skills-row">
+        <div class="box">
+          <h3>Attention to Detail</h3>
+          <div class="stars">⭐⭐⭐⭐</div>
+        </div>
+        <div class="box">
+          <h3>Self-Motivation</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+    <section id="resume" class="resume-section">
+        <h2>My Resume</h2>
+        <div class="resume-container">
+          <iframe src="RESUME.pdf" class="resume-preview" frameborder="75"></iframe>
+          <a href="RESUME.pdf" download class="download-btn">Download Resume</a>
+        </div>
+        
+      </section>
+      
+    <section id="certifications">
+        <h2>Certifications</h2>
+
+        <div class="box">
+            <p>CISCO: IT Essentials (2023)</p>
+            <img src="CISCO.png" alt="CISCO IT Essentials Certificate" class="certificate-image">
+            <a href="https://www.netacad.com/certificates?issuanceId=c2465f08-8a4d-4197-8788-e96033a8778a" class="btn-view-certificate">View Certificate</a>
+        </div>
+        
+        <div class="box">
+            <p>Salesforce Virtual Internship (2025)</p>
+            <img src="Salesforce.png" alt="Salesforce Virtual Internship Certificate" class="certificate-image">
+            <a href="#" class="btn-view-certificate">View Certificate</a>
+        </div>
+        
+        <div class="box">
+            <p>Deloitte Australia - Data Analytics Job Simulation</p>
+            <img src="Deloitte.png" alt="Deloitte Data Analytics Certificate" class="certificate-image">
+            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_KW7uy5EsjEXnTm5HC_1740580493821_completion_certificate.pdf" class="btn-view-certificate">View Certificate</a>
+        </div>
+
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="box">
+            <h3>Automatic Switch using PIR Sensor</h3>
+            <p>This project focuses on automating electrical appliances by detecting human presence using a PIR sensor. The system activates or deactivates the switch based on movement in its detection range.It aims to save energy and enhance convenience by automatically controlling lights and fans. The PIR sensor detects infrared radiation from human bodies, ensuring that appliances are switched on only when needed. This project highlights the application of sensor technology in everyday life for smart automation</p>
+            <img src="https://circuitdigest.com/sites/default/files/projectimage/Automatic-AC-Light.jpg" alt="PIR Project Photo" style="width:100%; margin-top:10px;">
+        </div>
+        <div class="box">
+            <h3>KNOW2GROW</h3>
+            <p>KNOW2GROW is an integrated career guidance system designed to assist individuals in making informed career choices. The platform combines personalized learning resources, resume analysis, and career exploration tools to help users navigate their career paths effectively. It provides insightful recommendations based on user profiles, skills, and goals. The system aims to empower users with actionable advice and resources for career advancement. With an intuitive interface, KNOW2GROW aims to bridge the gap between learning and career development.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9TbXKUvkxMjc1SgVa2ZQewpWpYrDxVnCgw&s" alt="KNOW2GROW Project Photo" style="width:100%; margin-top:10px;">
+        </div>
+    </section>
+
+    <section id="FEEDBACK">
+        <h2>FEEDBACK</h2>
+        <div class="box">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Feedback" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>All Rights are Reserved © PATANGI SOWMYA SREE</p>
+    </div>
+
+    <script>
+        const typingText = ["I am a Developer", "I am a Freelancer", "I am a Student"];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+
+        (function type() {
+            if (count === typingText.length) count = 0;
+            currentText = typingText[count];
+            letter = currentText.slice(0, ++index);
+
+            document.getElementById('typing-text').textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000);
+            } else {
+                setTimeout(type, 100);
+            }
+        })();
+
+
+        function toggleMode() {
+    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('light-mode');
+
+    // Store user preference in localStorage
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Load saved theme on page load
+window.onload = function () {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.add('light-mode');
+    }
+};
+
+let selectedVoice;
+
+function loadVoices() {
+    const voices = window.speechSynthesis.getVoices();
+
+    // Prefer female English voice
+    selectedVoice = voices.find(voice =>
+        voice.name.toLowerCase().includes("female") &&
+        (voice.lang === "en-IN" || voice.lang === "en-GB" || voice.lang.startsWith("en"))
+    ) ||
+    voices.find(voice =>
+        voice.name.includes("Google UK English Female")
+    ) ||
+    voices.find(voice =>
+        voice.lang.startsWith("en")
+    ) || voices[0];
+}
+
+if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = loadVoices;
+} else {
+    loadVoices();
+}
+
+document.getElementById("speak-name").addEventListener("click", () => {
+    const msg = new SpeechSynthesisUtterance("Pathangi Saumyashree");
+    msg.voice = selectedVoice;
+    msg.rate = 0.95;
+    msg.pitch = 1.1;
+    msg.lang = selectedVoice?.lang || "en-IN";
+    speechSynthesis.speak(msg);
+});
+
+const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("nav a[href^='#FEEDBACK']");
+
+  function onScroll() {
+    let scrollPos = window.scrollY + 100; // adjust for header
+    sections.forEach(sec => {
+      if (scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
+        navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + sec.id));
+      }
+    });
+  }
+  window.addEventListener("scroll", onScroll);
+
+    </script>
+</body>
+</html>
