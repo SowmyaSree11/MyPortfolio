@@ -66,28 +66,68 @@ body {
     backdrop-filter: blur(10px);
 }
 
+/* Default (Desktop) View */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: inherit;
+}
+
 header .name {
     font-weight: 900;
     font-size: 1.8rem;
     flex: 1;
-    text-align: center;
+    text-align: left;
     color: #ff007f;
 }
 
 header nav {
     flex: 2;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
+    gap: 20px;
 }
 
 header nav a {
     text-decoration: none;
+    color: inherit;
     font-weight: 500;
-    padding: 10px 15px;
-    color: #333;
-    transition: all 0.3s ease;
+    transition: color 0.3s;
 }
+
+header nav a:hover {
+    color: #ff007f;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+        gap: 10px;
+    }
+
+    header .name {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    header nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    header nav a {
+        font-size: 1rem;
+    }
+}
+
 
 body.dark-mode header nav a {
     color: #fff;
@@ -131,7 +171,7 @@ body.dark-mode .toggle-mode {
             border-radius: 50%;
             width: 200px;
             height: 200px;
-            object-fit: contain;
+            object-fit: fill;
             box-shadow: var(--box-shadow);
         }
 
@@ -831,7 +871,7 @@ body.dark-mode .social-icon:hover {
     </header>
 
     <div class="hero">
-      <img src="IMG_20250416_200549.jpg" alt="Profile Photo">
+      <img src="I.jpg" alt="Profile Photo">
       <h1>
           Hello! I’m 
           <span id="speak-name" style="cursor: pointer; text-decoration: underline dotted;">Patangi Sowmya Sree</span>
@@ -1014,15 +1054,20 @@ body.dark-mode .social-icon:hover {
     </section>
 
     <section id="FEEDBACK">
-        <h2>FEEDBACK</h2>
-        <div class="box">
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Feedback" rows="4" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+      <h2>FEEDBACK</h2>
+      <div class="box">
+        <form action="https://formsubmit.co/patangisowmyasree05@gmail.com" method="POST">
+          <!-- Hidden fields -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+  
+          <!-- Form fields -->
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Feedback" rows="4" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </section>
 
     <div class="footer">
